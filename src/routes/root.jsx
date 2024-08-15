@@ -1,4 +1,6 @@
-export default function Root() {
+import { Outlet } from "react-router-dom"
+
+export default function Root() { // ROOT ROUTE - Sidebar search and Outlet for Contact
     return (
         <>
             <div id="sidebar">
@@ -34,7 +36,9 @@ export default function Root() {
                     </ul>
                 </nav>
             </div>
-            <div id="detail"></div>
+            <div id="detail"> 
+                <Outlet />
+            </div>
         </>
     );
 };
